@@ -1,5 +1,9 @@
 language: node_js
 node_js:
   - "6"
-before_install: npm -g install gulp npm install
-after_success : gulp
+before_install: 
+    - npm -g install gulp
+install:
+    - npm install
+script: 
+    - gulp
