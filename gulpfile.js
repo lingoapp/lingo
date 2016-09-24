@@ -47,3 +47,9 @@ gulp.task('watch', function() {
 gulp.task('default', function(callback) {
   runSequence('clean', 'templates', ['css', 'vmux.js', 'site.js'], 'watch', callback);
 });
+
+gulp.on('stop', function () {
+  process.nextTick(function () {
+    process.exit(0);
+  });
+});
