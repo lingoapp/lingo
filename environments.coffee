@@ -14,7 +14,7 @@ module.exports =
       port: 6379
 
     cookies:
-      domain: '.vmux.co'
+      domain: '.lingoapp.tk'
       secure: true
 
   development:
