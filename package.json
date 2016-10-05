@@ -1,14 +1,14 @@
 {
-  "name": "vmux",
+  "name": "lingo",
   "description": "Secure P2P text, audio and video chats in your browser.",
-  "author": "Mauro Pompilio <hackers.are.rockstars@gmail.com>",
+  "author": "Frederic Choquette <LATER>",
   "version": "0.3.0",
   "main": "app.coffee",
   "scripts": {
     "start": "nodemon app.coffee",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/malditogeek/vmux",
+  "repository": "https://github.com/lingoapp/lingo",
   "license": "BSD",
   "devDependencies": {
     "gulp": "^3.8.6",
