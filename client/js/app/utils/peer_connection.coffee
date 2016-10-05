@@ -13,7 +13,7 @@ class GenericPC
       #optional: [{RtpDataChannels: true}]
 
     stun_server = 
-      url: 'stun:88.198.32.137:3479'
+      url: 'stun:149.56.100.213:3480'
 
     turn_server =
       url:        'turn:149.56.100.213:3478?transport=udp'
