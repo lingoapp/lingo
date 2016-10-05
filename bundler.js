@@ -17,11 +17,11 @@ var bundleModes = {
 var envs = {
   development: {
     name: 'development',
-    host: 'http://localhost:5000'
+    host: 'https://www.lingoapp.tk'
   },
   production:{
     name: 'production',
-    host: 'https://vmux.co'
+    host: 'https://www.lingoapp.tk'
   }
 };
 
