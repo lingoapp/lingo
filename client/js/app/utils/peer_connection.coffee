@@ -16,9 +16,9 @@ class GenericPC
       url: 'stun:88.198.32.137:3479'
 
     turn_server =
-      url:        'turn:88.198.32.137:3478?transport=udp'
-      username:   'vmux'
-      credential: '23c50f88-1c92-4a64-a803-69a2fa5d9a4a'
+      url:        'turn:149.56.100.213:3478?transport=udp'
+      username:   'public'
+      credential: 'lingo'
 
     config = iceServers: [stun_server, turn_server ]
 
