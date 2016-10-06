@@ -16,7 +16,7 @@ class GenericPC
       url: 'stun:stun.l.google.com:19302'
 
     turn_server =
-      url:        'turn:149.56.100.213:3478?transport=udp'
+      url:        'turn:149.56.100.213:3478'
       username:   'public'
       credential: 'lingo'
 
