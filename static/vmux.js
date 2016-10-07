@@ -578,17 +578,17 @@ module.exports = (function() {
     templates['chat/message'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div class=\"chat-message ");t.b(t.v(t.f("css_classes",c,p,0)));t.b("\"><img src=\"");t.b(t.v(t.f("avatar_url",c,p,0)));t.b("\" class=\"img-circle avatar\"/><span>");t.b(t.t(t.f("message",c,p,0)));t.b("</span></div><div class=\"clear\"></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['landing/guest_login_modal'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"modal\" class=\"modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" data-dismiss=\"modal\" aria-hidden=\"true\" class=\"close\">&times;</button><h4>What's your name?</h4></div><div class=\"modal-body\"><p><input id=\"username\" type=\"text\" placeholder=\"A username without spaces\" autofocus=\"true\" class=\"form-control\"/></p><p><button id=\"login\" type=\"submit\" class=\"btn btn-success\">Login</button></p></div></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['layout/home'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"bgvideo\"><video id=\"loopback\" autoplay=\"autoplay\" muted=\"muted\"></video></div><div id=\"wrapper\"><div id=\"background\"></div><div id=\"container\"><div id=\"navbar\"></div>");if(t.s(t.d("user.guest",c,p,1),c,p,0,190,323,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("<div class=\"guest-notice\"><p>To receive a call, send this link: <a href=\"");t.b(t.v(t.f("host",c,p,0)));t.b("/");t.b(t.v(t.d("user.uuid",c,p,0)));t.b("\">");t.b(t.v(t.f("host",c,p,0)));t.b("/");t.b(t.v(t.d("user.uuid",c,p,0)));t.b("</a></p></div>");});c.pop();}t.b("<div id=\"roster\"></div><div id=\"placeholder\">");if(!t.s(t.d("user.guest",c,p,1),c,p,1,0,0,"")){t.b("<p>None of your friends are online.</p>");};t.b("</div></div><div id=\"conversation\"></div></div><div id=\"notification\"></div>");return t.fl(); },partials: {}, subs: {  }});
-    templates['layout/landing'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"homepage\"><div class=\"logo\"><img src=\"/vmux.png\"/><p>video calls in your browser</p></div><div class=\"login\"><p>Goodbye Skype.</p><a id=\"twitter-login\" href=\"/auth/twitter\" class=\"btn btn-primary btn-lg\">Login with Twitter</a><a id=\"guest-login\" href=\"#\" class=\"btn btn-primary btn-lg\">Login as Guest</a></div><div class=\"about\"><p>VMUX is a Skype™ alternative that runs in the browser. It's built on top of WebRTC so you don't need to install any plugins or use Flash. You can do one-to-one or multi-party video calls and all the communications and P2P are encrypted.</p></div></div><div id=\"github\"><a href=\"https://github.com/malditogeek/vmux\" target=\"_blank\"><small>VMUX is open-source, fork it on GitHub.</small></a></div>");return t.fl(); },partials: {}, subs: {  }});
+    templates['layout/landing'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"homepage\"><div class=\"logo\"><img src=\"/vmux.png\"/><p>video calls in your browser</p></div><div class=\"login\"><p>Goodbye Skype.</p><a id=\"twitter-login\" href=\"/auth/twitter\" class=\"btn btn-primary btn-lg\">Login with Twitter</a><a id=\"guest-login\" href=\"#\" class=\"btn btn-primary btn-lg\">Login as Guest</a></div><div class=\"about\"><p>LINGO is a Skype™ alternative that runs in the browser. It's built on top of WebRTC so you don't need to install any plugins or use Flash. You can do one-to-one or multi-party video calls and all the communications and P2P are encrypted.</p></div></div><div id=\"github\"><a href=\"https://github.com/lingoapp/lingo\" target=\"_blank\"><small>LINGO is open-source, fork it on GitHub.</small></a></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['layout/profile'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"bgvideo\"><video id=\"loopback\" autoplay=\"autoplay\" muted=\"muted\"></video></div><div id=\"wrapper\"><div id=\"background\"></div><div id=\"container\"><div id=\"navbar\"></div><div id=\"singleuser\"><p><img src=\"");t.b(t.v(t.f("profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle\"/></p><p><small>");t.b(t.v(t.f("screen_name",c,p,0)));t.b("</small></p><p><button class=\"call btn btn-info\">Call</button></p></div></div><div id=\"conversation\"></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['layout/room'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"navbar\"></div><div id=\"chat\"><div id=\"chat-messages-container\"><div id=\"chat-messages\"></div></div><div id=\"chat-input\"></div></div><div id=\"streams\"></div>");return t.fl(); },partials: {}, subs: {  }});
-    templates['sidebar/info_modal'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"modal\" class=\"modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" data-dismiss=\"modal\" aria-hidden=\"true\" class=\"close\">&times;</button><a href=\"https://github.com/malditogeek/vmux\" target=\"_blank\"><img src=\"/vmux_logo.png\" style=\"width: 100px;\"/></a></div><div class=\"modal-body\"><p>VMUX is open-source software, you can fork it on <a href=\"https://github.com/malditogeek/vmux\" target=\"_blank\">GitHub.</a></p><p>If you have any questions, join the conversation on <a href=\"https://gitter.im/malditogeek/vmux\" target=\"_blank\">Gitter.</a></p><p>~</p><p>Thanks for using VMUX!</p><p><i class=\"fa fa-heart\"></i></p></div></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
+    templates['sidebar/info_modal'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"modal\" class=\"modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" data-dismiss=\"modal\" aria-hidden=\"true\" class=\"close\">&times;</button><a href=\"https://github.com/lingoapp/lingo\" target=\"_blank\"><img src=\"/vmux_logo.png\" style=\"width: 100px;\"/></a></div><div class=\"modal-body\"><p>LINGO is open-source software, you can fork it on <a href=\"https://github.com/lingoapp/lingo\" target=\"_blank\">GitHub.</a></p><p>If you have any questions, join the conversation on <a href=\"https://gitter.im/Lingoapp/Lobby\" target=\"_blank\">Gitter.</a></p><p>~</p><p>Thanks for using LINGO!</p><p><i class=\"fa fa-heart\"></i></p></div></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['sidebar/room_modal'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"modal\" class=\"modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" data-dismiss=\"modal\" aria-hidden=\"true\" class=\"close\">&times;</button><h4>Join a room</h4></div><div class=\"modal-body\"><p><input id=\"room\" type=\"text\" placeholder=\"Room name\" autofocus=\"true\" class=\"form-control\"/></p><p><button id=\"join\" class=\"btn btn-success\">Join</button></p></div></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['user/call_request'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div class=\"call-request modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-body\"><p><img src=\"");t.b(t.v(t.d("user.profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle\"/></p><p>Accept ");t.b(t.v(t.f("type",c,p,0)));t.b(" call from ");t.b(t.v(t.d("user.screen_name",c,p,0)));t.b("?</p><p><small>Grant access to your ");t.b(t.v(t.f("type",c,p,0)));t.b(" input first</small></p><p><button class=\"reject btn btn-danger donotdisplay\"> Decline</button><button class=\"accept btn btn-success donotdisplay\">Accept</button><audio src=\"/ringtone.mp3\" autoplay=\"autoplay\" loop=\"loop\"></audio></p></div></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['user/detail'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<img src=\"");t.b(t.v(t.f("profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle\"/><p><small>");t.b(t.v(t.f("screen_name",c,p,0)));t.b("</small></p><p class=\"actions\"><i data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Chat\" class=\"show-chat fa fa-comment tip\"></i><span class=\"unreadCount\"></span><i data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Audiocall\" class=\"audiocall fa fa-phone tip\"></i><i data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Videocall\" class=\"videocall fa fa-video-camera tip\"></i></p><div class=\"chat modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class=\"close hide-chat\">&times;</button><span>Chat with ");t.b(t.v(t.f("screen_name",c,p,0)));t.b("</span></div><div class=\"modal-body\"><div class=\"chat-messages\"></div><div class=\"chat-input\"></div></div></div></div></div><div class=\"audio modal fade\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><span>Audio call with ");t.b(t.v(t.f("screen_name",c,p,0)));t.b("</span></div><div class=\"modal-body\"><div class=\"one-to-one-audio\"></div></div></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['user/localvideo'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<video muted=\"muted\" autoplay=\"autoplay\"></video><div id=\"controls\"><i id=\"toggle-audio\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Microphone is ON\" class=\"fa fa-microphone tip\"></i><i id=\"toggle-video\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"Camera is ON\" class=\"fa fa-video-camera tip\"></i></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['user/one_to_one'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<div id=\"controls\"><i id=\"toggle-fullscreen\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Go full-screen\" class=\"fa fa-arrows-alt tip\"></i><i id=\"toggle-audio\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Microphone is ON\" class=\"fa fa-microphone tip\"></i><i id=\"toggle-video\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Camera is ON\" class=\"fa fa-video-camera tip\"></i><i id=\"hangup\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"Hangup\" class=\"fa fa-sign-out tip\"></i></div><div id=\"chat\"><div id=\"chat-messages\"></div><div id=\"chat-input\"></div></div><video id=\"remote\" autoplay=\"autoplay\"></video><video id=\"local\" autoplay=\"autoplay\" muted=\"muted\"></video>");return t.fl(); },partials: {}, subs: {  }});
     templates['user/one_to_one_audio'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<img src=\"");t.b(t.v(t.f("profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle\"/><p><a href=\"#\" class=\"hangup\">Hangup</a></p><audio autoplay=\"autoplay\" class=\"stream donotdisplay\"></audio>");return t.fl(); },partials: {}, subs: {  }});
-    templates['user/sidebar'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<!--#content--><!--  #user--><!--    img.img-circle(src=\"");t.b(t.v(t.f("avatar",c,p,0)));t.b("\")--><!----><!--  #menu--><!--    ul--><!--      li--><!--        a#home(href='#')--><!--          img(src='/home.png')--><!--      li--><!--        a#group(href='#')--><!--          img(src='/group.png')--><!--      li--><!--        a#info(href='#')--><!--          img(src='/info.png')--><!----><!----><!--  #logo--><!--    a(href='https://github.com/malditogeek/vmux', target='_blank')--><!--      img(src='/vmux.png')--><div role=\"navigation\" class=\"navbar navbar-inverse\"><div class=\"container-fluid\"><div class=\"navbar-header\"><button type=\"button\" data-toggle=\"collapse\" data-target=\"#nav-icons\" class=\"navbar-toggle\"><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><div class=\"navbar-brand\"><img src=\"");t.b(t.v(t.f("profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle\"/></div></div><div id=\"nav-icons\" class=\"collapse navbar-collapse\"><ul class=\"nav navbar-nav\"><li><a id=\"home\" href=\"#\">HOME</a></li><li><a id=\"group\" href=\"#\">JOIN ROOM</a></li><li><a id=\"info\" href=\"#\">ABOUT</a></li></ul></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
+    templates['user/sidebar'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<!--#content--><!--  #user--><!--    img.img-circle(src=\"");t.b(t.v(t.f("avatar",c,p,0)));t.b("\")--><!----><!--  #menu--><!--    ul--><!--      li--><!--        a#home(href='#')--><!--          img(src='/home.png')--><!--      li--><!--        a#group(href='#')--><!--          img(src='/group.png')--><!--      li--><!--        a#info(href='#')--><!--          img(src='/info.png')--><!----><!----><!--  #logo--><!--    a(href='https://github.com/lingoapp/lingo', target='_blank')--><!--      img(src='/vmux.png')--><div role=\"navigation\" class=\"navbar navbar-inverse\"><div class=\"container-fluid\"><div class=\"navbar-header\"><button type=\"button\" data-toggle=\"collapse\" data-target=\"#nav-icons\" class=\"navbar-toggle\"><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button><div class=\"navbar-brand\"><img src=\"");t.b(t.v(t.f("profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle\"/></div></div><div id=\"nav-icons\" class=\"collapse navbar-collapse\"><ul class=\"nav navbar-nav\"><li><a id=\"home\" href=\"#\">HOME</a></li><li><a id=\"group\" href=\"#\">JOIN ROOM</a></li><li><a id=\"info\" href=\"#\">ABOUT</a></li></ul></div></div></div>");return t.fl(); },partials: {}, subs: {  }});
     templates['user/video'] = new Hogan.Template({code: function (c,p,i) { var t=this;t.b(i=i||"");t.b("<video autoplay=\"autoplay\" poster=\"/video-poster.jpg\"></video><div class=\"screen_name\"><img src=\"");t.b(t.v(t.f("profile_image_url_https",c,p,0)));t.b("\" class=\"img-circle avatar\"/><span>");t.b(t.v(t.f("screen_name",c,p,0)));t.b("</span></div><!--");if(t.s(t.f("local",c,p,1),c,p,0,201,452,"{{ }}")){t.rs(c,p,function(c,p,t){t.b("--><!--#controls--><!--  i#toggle-audio.fa.fa-microphone.tip(data-toggle=\"tooltip\", data-placement=\"top\", title=\"Microphone is ON\")--><!--  i#toggle-video.fa.fa-video-camera.tip(data-toggle=\"tooltip\", data-placement=\"top\", title=\"Camera is ON\")--><!--");});c.pop();}t.b("-->");return t.fl(); },partials: {}, subs: {  }});
     return templates;
 })();
@@ -2841,29 +2841,29 @@ function extendjQuery(jQuery) {
 
   +function ($) {
     'use strict';
-  
+
     // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
     // ============================================================
-  
+
     function transitionEnd() {
       var el = document.createElement('bootstrap')
-  
+
       var transEndEventNames = {
         'WebkitTransition' : 'webkitTransitionEnd',
         'MozTransition'    : 'transitionend',
         'OTransition'      : 'oTransitionEnd otransitionend',
         'transition'       : 'transitionend'
       }
-  
+
       for (var name in transEndEventNames) {
         if (el.style[name] !== undefined) {
           return { end: transEndEventNames[name] }
         }
       }
-  
+
       return false // explicit for ie8 (  ._.)
     }
-  
+
     // http://blog.alexmaccaw.com/css-transitions
     $.fn.emulateTransitionEnd = function (duration) {
       var called = false, $el = this
@@ -2872,13 +2872,13 @@ function extendjQuery(jQuery) {
       setTimeout(callback, duration)
       return this
     }
-  
+
     $(function () {
       $.support.transition = transitionEnd()
     })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: alert.js v3.1.1
    * http://getbootstrap.com/javascript/#alerts
@@ -2886,88 +2886,88 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // ALERT CLASS DEFINITION
     // ======================
-  
+
     var dismiss = '[data-dismiss="alert"]'
     var Alert   = function (el) {
       $(el).on('click', dismiss, this.close)
     }
-  
+
     Alert.prototype.close = function (e) {
       var $this    = $(this)
       var selector = $this.attr('data-target')
-  
+
       if (!selector) {
         selector = $this.attr('href')
         selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
       }
-  
+
       var $parent = $(selector)
-  
+
       if (e) e.preventDefault()
-  
+
       if (!$parent.length) {
         $parent = $this.hasClass('alert') ? $this : $this.parent()
       }
-  
+
       $parent.trigger(e = $.Event('close.bs.alert'))
-  
+
       if (e.isDefaultPrevented()) return
-  
+
       $parent.removeClass('in')
-  
+
       function removeElement() {
         $parent.trigger('closed.bs.alert').remove()
       }
-  
+
       $.support.transition && $parent.hasClass('fade') ?
         $parent
           .one($.support.transition.end, removeElement)
           .emulateTransitionEnd(150) :
         removeElement()
     }
-  
-  
+
+
     // ALERT PLUGIN DEFINITION
     // =======================
-  
+
     var old = $.fn.alert
-  
+
     $.fn.alert = function (option) {
       return this.each(function () {
         var $this = $(this)
         var data  = $this.data('bs.alert')
-  
+
         if (!data) $this.data('bs.alert', (data = new Alert(this)))
         if (typeof option == 'string') data[option].call($this)
       })
     }
-  
+
     $.fn.alert.Constructor = Alert
-  
-  
+
+
     // ALERT NO CONFLICT
     // =================
-  
+
     $.fn.alert.noConflict = function () {
       $.fn.alert = old
       return this
     }
-  
-  
+
+
     // ALERT DATA-API
     // ==============
-  
+
     $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: button.js v3.1.1
    * http://getbootstrap.com/javascript/#buttons
@@ -2975,36 +2975,36 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // BUTTON PUBLIC CLASS DEFINITION
     // ==============================
-  
+
     var Button = function (element, options) {
       this.$element  = $(element)
       this.options   = $.extend({}, Button.DEFAULTS, options)
       this.isLoading = false
     }
-  
+
     Button.DEFAULTS = {
       loadingText: 'loading...'
     }
-  
+
     Button.prototype.setState = function (state) {
       var d    = 'disabled'
       var $el  = this.$element
       var val  = $el.is('input') ? 'val' : 'html'
       var data = $el.data()
-  
+
       state = state + 'Text'
-  
+
       if (!data.resetText) $el.data('resetText', $el[val]())
-  
+
       $el[val](data[state] || this.options[state])
-  
+
       // push to event loop to allow forms to submit
       setTimeout($.proxy(function () {
         if (state == 'loadingText') {
@@ -3016,11 +3016,11 @@ function extendjQuery(jQuery) {
         }
       }, this), 0)
     }
-  
+
     Button.prototype.toggle = function () {
       var changed = true
       var $parent = this.$element.closest('[data-toggle="buttons"]')
-  
+
       if ($parent.length) {
         var $input = this.$element.find('input')
         if ($input.prop('type') == 'radio') {
@@ -3029,53 +3029,53 @@ function extendjQuery(jQuery) {
         }
         if (changed) $input.prop('checked', !this.$element.hasClass('active')).trigger('change')
       }
-  
+
       if (changed) this.$element.toggleClass('active')
     }
-  
-  
+
+
     // BUTTON PLUGIN DEFINITION
     // ========================
-  
+
     var old = $.fn.button
-  
+
     $.fn.button = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.button')
         var options = typeof option == 'object' && option
-  
+
         if (!data) $this.data('bs.button', (data = new Button(this, options)))
-  
+
         if (option == 'toggle') data.toggle()
         else if (option) data.setState(option)
       })
     }
-  
+
     $.fn.button.Constructor = Button
-  
-  
+
+
     // BUTTON NO CONFLICT
     // ==================
-  
+
     $.fn.button.noConflict = function () {
       $.fn.button = old
       return this
     }
-  
-  
+
+
     // BUTTON DATA-API
     // ===============
-  
+
     $(document).on('click.bs.button.data-api', '[data-toggle^=button]', function (e) {
       var $btn = $(e.target)
       if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
       $btn.button('toggle')
       e.preventDefault()
     })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: carousel.js v3.1.1
    * http://getbootstrap.com/javascript/#carousel
@@ -3083,14 +3083,14 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // CAROUSEL CLASS DEFINITION
     // =========================
-  
+
     var Carousel = function (element, options) {
       this.$element    = $(element)
       this.$indicators = this.$element.find('.carousel-indicators')
@@ -3100,72 +3100,72 @@ function extendjQuery(jQuery) {
       this.interval    =
       this.$active     =
       this.$items      = null
-  
+
       this.options.pause == 'hover' && this.$element
         .on('mouseenter', $.proxy(this.pause, this))
         .on('mouseleave', $.proxy(this.cycle, this))
     }
-  
+
     Carousel.DEFAULTS = {
       interval: 5000,
       pause: 'hover',
       wrap: true
     }
-  
+
     Carousel.prototype.cycle =  function (e) {
       e || (this.paused = false)
-  
+
       this.interval && clearInterval(this.interval)
-  
+
       this.options.interval
         && !this.paused
         && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
-  
+
       return this
     }
-  
+
     Carousel.prototype.getActiveIndex = function () {
       this.$active = this.$element.find('.item.active')
       this.$items  = this.$active.parent().children()
-  
+
       return this.$items.index(this.$active)
     }
-  
+
     Carousel.prototype.to = function (pos) {
       var that        = this
       var activeIndex = this.getActiveIndex()
-  
+
       if (pos > (this.$items.length - 1) || pos < 0) return
-  
+
       if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) })
       if (activeIndex == pos) return this.pause().cycle()
-  
+
       return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
     }
-  
+
     Carousel.prototype.pause = function (e) {
       e || (this.paused = true)
-  
+
       if (this.$element.find('.next, .prev').length && $.support.transition) {
         this.$element.trigger($.support.transition.end)
         this.cycle(true)
       }
-  
+
       this.interval = clearInterval(this.interval)
-  
+
       return this
     }
-  
+
     Carousel.prototype.next = function () {
       if (this.sliding) return
       return this.slide('next')
     }
-  
+
     Carousel.prototype.prev = function () {
       if (this.sliding) return
       return this.slide('prev')
     }
-  
+
     Carousel.prototype.slide = function (type, next) {
       var $active   = this.$element.find('.item.active')
       var $next     = next || $active[type]()
@@ -3173,22 +3173,22 @@ function extendjQuery(jQuery) {
       var direction = type == 'next' ? 'left' : 'right'
       var fallback  = type == 'next' ? 'first' : 'last'
       var that      = this
-  
+
       if (!$next.length) {
         if (!this.options.wrap) return
         $next = this.$element.find('.item')[fallback]()
       }
-  
+
       if ($next.hasClass('active')) return this.sliding = false
-  
+
       var e = $.Event('slide.bs.carousel', { relatedTarget: $next[0], direction: direction })
       this.$element.trigger(e)
       if (e.isDefaultPrevented()) return
-  
+
       this.sliding = true
-  
+
       isCycling && this.pause()
-  
+
       if (this.$indicators.length) {
         this.$indicators.find('.active').removeClass('active')
         this.$element.one('slid.bs.carousel', function () {
@@ -3196,7 +3196,7 @@ function extendjQuery(jQuery) {
           $nextIndicator && $nextIndicator.addClass('active')
         })
       }
-  
+
       if ($.support.transition && this.$element.hasClass('slide')) {
         $next.addClass(type)
         $next[0].offsetWidth // force reflow
@@ -3216,72 +3216,72 @@ function extendjQuery(jQuery) {
         this.sliding = false
         this.$element.trigger('slid.bs.carousel')
       }
-  
+
       isCycling && this.cycle()
-  
+
       return this
     }
-  
-  
+
+
     // CAROUSEL PLUGIN DEFINITION
     // ==========================
-  
+
     var old = $.fn.carousel
-  
+
     $.fn.carousel = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.carousel')
         var options = $.extend({}, Carousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
         var action  = typeof option == 'string' ? option : options.slide
-  
+
         if (!data) $this.data('bs.carousel', (data = new Carousel(this, options)))
         if (typeof option == 'number') data.to(option)
         else if (action) data[action]()
         else if (options.interval) data.pause().cycle()
       })
     }
-  
+
     $.fn.carousel.Constructor = Carousel
-  
-  
+
+
     // CAROUSEL NO CONFLICT
     // ====================
-  
+
     $.fn.carousel.noConflict = function () {
       $.fn.carousel = old
       return this
     }
-  
-  
+
+
     // CAROUSEL DATA-API
     // =================
-  
+
     $(document).on('click.bs.carousel.data-api', '[data-slide], [data-slide-to]', function (e) {
       var $this   = $(this), href
       var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
       var options = $.extend({}, $target.data(), $this.data())
       var slideIndex = $this.attr('data-slide-to')
       if (slideIndex) options.interval = false
-  
+
       $target.carousel(options)
-  
+
       if (slideIndex = $this.attr('data-slide-to')) {
         $target.data('bs.carousel').to(slideIndex)
       }
-  
+
       e.preventDefault()
     })
-  
+
     $(window).on('load', function () {
       $('[data-ride="carousel"]').each(function () {
         var $carousel = $(this)
         $carousel.carousel($carousel.data())
       })
     })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: collapse.js v3.1.1
    * http://getbootstrap.com/javascript/#collapse
@@ -3289,57 +3289,57 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // COLLAPSE PUBLIC CLASS DEFINITION
     // ================================
-  
+
     var Collapse = function (element, options) {
       this.$element      = $(element)
       this.options       = $.extend({}, Collapse.DEFAULTS, options)
       this.transitioning = null
-  
+
       if (this.options.parent) this.$parent = $(this.options.parent)
       if (this.options.toggle) this.toggle()
     }
-  
+
     Collapse.DEFAULTS = {
       toggle: true
     }
-  
+
     Collapse.prototype.dimension = function () {
       var hasWidth = this.$element.hasClass('width')
       return hasWidth ? 'width' : 'height'
     }
-  
+
     Collapse.prototype.show = function () {
       if (this.transitioning || this.$element.hasClass('in')) return
-  
+
       var startEvent = $.Event('show.bs.collapse')
       this.$element.trigger(startEvent)
       if (startEvent.isDefaultPrevented()) return
-  
+
       var actives = this.$parent && this.$parent.find('> .panel > .in')
-  
+
       if (actives && actives.length) {
         var hasData = actives.data('bs.collapse')
         if (hasData && hasData.transitioning) return
         actives.collapse('hide')
         hasData || actives.data('bs.collapse', null)
       }
-  
+
       var dimension = this.dimension()
-  
+
       this.$element
         .removeClass('collapse')
         .addClass('collapsing')
         [dimension](0)
-  
+
       this.transitioning = 1
-  
+
       var complete = function () {
         this.$element
           .removeClass('collapsing')
@@ -3348,37 +3348,37 @@ function extendjQuery(jQuery) {
         this.transitioning = 0
         this.$element.trigger('shown.bs.collapse')
       }
-  
+
       if (!$.support.transition) return complete.call(this)
-  
+
       var scrollSize = $.camelCase(['scroll', dimension].join('-'))
-  
+
       this.$element
         .one($.support.transition.end, $.proxy(complete, this))
         .emulateTransitionEnd(350)
         [dimension](this.$element[0][scrollSize])
     }
-  
+
     Collapse.prototype.hide = function () {
       if (this.transitioning || !this.$element.hasClass('in')) return
-  
+
       var startEvent = $.Event('hide.bs.collapse')
       this.$element.trigger(startEvent)
       if (startEvent.isDefaultPrevented()) return
-  
+
       var dimension = this.dimension()
-  
+
       this.$element
         [dimension](this.$element[dimension]())
         [0].offsetHeight
-  
+
       this.$element
         .addClass('collapsing')
         .removeClass('collapse')
         .removeClass('in')
-  
+
       this.transitioning = 1
-  
+
       var complete = function () {
         this.transitioning = 0
         this.$element
@@ -3386,52 +3386,52 @@ function extendjQuery(jQuery) {
           .removeClass('collapsing')
           .addClass('collapse')
       }
-  
+
       if (!$.support.transition) return complete.call(this)
-  
+
       this.$element
         [dimension](0)
         .one($.support.transition.end, $.proxy(complete, this))
         .emulateTransitionEnd(350)
     }
-  
+
     Collapse.prototype.toggle = function () {
       this[this.$element.hasClass('in') ? 'hide' : 'show']()
     }
-  
-  
+
+
     // COLLAPSE PLUGIN DEFINITION
     // ==========================
-  
+
     var old = $.fn.collapse
-  
+
     $.fn.collapse = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.collapse')
         var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
-  
+
         if (!data && options.toggle && option == 'show') option = !option
         if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
         if (typeof option == 'string') data[option]()
       })
     }
-  
+
     $.fn.collapse.Constructor = Collapse
-  
-  
+
+
     // COLLAPSE NO CONFLICT
     // ====================
-  
+
     $.fn.collapse.noConflict = function () {
       $.fn.collapse = old
       return this
     }
-  
-  
+
+
     // COLLAPSE DATA-API
     // =================
-  
+
     $(document).on('click.bs.collapse.data-api', '[data-toggle=collapse]', function (e) {
       var $this   = $(this), href
       var target  = $this.attr('data-target')
@@ -3442,17 +3442,17 @@ function extendjQuery(jQuery) {
       var option  = data ? 'toggle' : $this.data()
       var parent  = $this.attr('data-parent')
       var $parent = parent && $(parent)
-  
+
       if (!data || !data.transitioning) {
         if ($parent) $parent.find('[data-toggle=collapse][data-parent="' + parent + '"]').not($this).addClass('collapsed')
         $this[$target.hasClass('in') ? 'addClass' : 'removeClass']('collapsed')
       }
-  
+
       $target.collapse(option)
     })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: dropdown.js v3.1.1
    * http://getbootstrap.com/javascript/#dropdowns
@@ -3460,83 +3460,83 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // DROPDOWN CLASS DEFINITION
     // =========================
-  
+
     var backdrop = '.dropdown-backdrop'
     var toggle   = '[data-toggle=dropdown]'
     var Dropdown = function (element) {
       $(element).on('click.bs.dropdown', this.toggle)
     }
-  
+
     Dropdown.prototype.toggle = function (e) {
       var $this = $(this)
-  
+
       if ($this.is('.disabled, :disabled')) return
-  
+
       var $parent  = getParent($this)
       var isActive = $parent.hasClass('open')
-  
+
       clearMenus()
-  
+
       if (!isActive) {
         if ('ontouchstart' in document.documentElement && !$parent.closest('.navbar-nav').length) {
           // if mobile we use a backdrop because click events don't delegate
           $('<div class="dropdown-backdrop"/>').insertAfter($(this)).on('click', clearMenus)
         }
-  
+
         var relatedTarget = { relatedTarget: this }
         $parent.trigger(e = $.Event('show.bs.dropdown', relatedTarget))
-  
+
         if (e.isDefaultPrevented()) return
-  
+
         $parent
           .toggleClass('open')
           .trigger('shown.bs.dropdown', relatedTarget)
-  
+
         $this.focus()
       }
-  
+
       return false
     }
-  
+
     Dropdown.prototype.keydown = function (e) {
       if (!/(38|40|27)/.test(e.keyCode)) return
-  
+
       var $this = $(this)
-  
+
       e.preventDefault()
       e.stopPropagation()
-  
+
       if ($this.is('.disabled, :disabled')) return
-  
+
       var $parent  = getParent($this)
       var isActive = $parent.hasClass('open')
-  
+
       if (!isActive || (isActive && e.keyCode == 27)) {
         if (e.which == 27) $parent.find(toggle).focus()
         return $this.click()
       }
-  
+
       var desc = ' li:not(.divider):visible a'
       var $items = $parent.find('[role=menu]' + desc + ', [role=listbox]' + desc)
-  
+
       if (!$items.length) return
-  
+
       var index = $items.index($items.filter(':focus'))
-  
+
       if (e.keyCode == 38 && index > 0)                 index--                        // up
       if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
       if (!~index)                                      index = 0
-  
+
       $items.eq(index).focus()
     }
-  
+
     function clearMenus(e) {
       $(backdrop).remove()
       $(toggle).each(function () {
@@ -3548,59 +3548,59 @@ function extendjQuery(jQuery) {
         $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
       })
     }
-  
+
     function getParent($this) {
       var selector = $this.attr('data-target')
-  
+
       if (!selector) {
         selector = $this.attr('href')
         selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
       }
-  
+
       var $parent = selector && $(selector)
-  
+
       return $parent && $parent.length ? $parent : $this.parent()
     }
-  
-  
+
+
     // DROPDOWN PLUGIN DEFINITION
     // ==========================
-  
+
     var old = $.fn.dropdown
-  
+
     $.fn.dropdown = function (option) {
       return this.each(function () {
         var $this = $(this)
         var data  = $this.data('bs.dropdown')
-  
+
         if (!data) $this.data('bs.dropdown', (data = new Dropdown(this)))
         if (typeof option == 'string') data[option].call($this)
       })
     }
-  
+
     $.fn.dropdown.Constructor = Dropdown
-  
-  
+
+
     // DROPDOWN NO CONFLICT
     // ====================
-  
+
     $.fn.dropdown.noConflict = function () {
       $.fn.dropdown = old
       return this
     }
-  
-  
+
+
     // APPLY TO STANDARD DROPDOWN ELEMENTS
     // ===================================
-  
+
     $(document)
       .on('click.bs.dropdown.data-api', clearMenus)
       .on('click.bs.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
       .on('click.bs.dropdown.data-api', toggle, Dropdown.prototype.toggle)
       .on('keydown.bs.dropdown.data-api', toggle + ', [role=menu], [role=listbox]', Dropdown.prototype.keydown)
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: modal.js v3.1.1
    * http://getbootstrap.com/javascript/#modals
@@ -3608,20 +3608,20 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // MODAL CLASS DEFINITION
     // ======================
-  
+
     var Modal = function (element, options) {
       this.options   = options
       this.$element  = $(element)
       this.$backdrop =
       this.isShown   = null
-  
+
       if (this.options.remote) {
         this.$element
           .find('.modal-content')
@@ -3630,54 +3630,54 @@ function extendjQuery(jQuery) {
           }, this))
       }
     }
-  
+
     Modal.DEFAULTS = {
       backdrop: true,
       keyboard: true,
       show: true
     }
-  
+
     Modal.prototype.toggle = function (_relatedTarget) {
       return this[!this.isShown ? 'show' : 'hide'](_relatedTarget)
     }
-  
+
     Modal.prototype.show = function (_relatedTarget) {
       var that = this
       var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
-  
+
       this.$element.trigger(e)
-  
+
       if (this.isShown || e.isDefaultPrevented()) return
-  
+
       this.isShown = true
-  
+
       this.escape()
-  
+
       this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
-  
+
       this.backdrop(function () {
         var transition = $.support.transition && that.$element.hasClass('fade')
-  
+
         if (!that.$element.parent().length) {
           that.$element.appendTo(document.body) // don't move modals dom position
         }
-  
+
         that.$element
           .show()
           .scrollTop(0)
-  
+
         if (transition) {
           that.$element[0].offsetWidth // force reflow
         }
-  
+
         that.$element
           .addClass('in')
           .attr('aria-hidden', false)
-  
+
         that.enforceFocus()
-  
+
         var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
-  
+
         transition ?
           that.$element.find('.modal-dialog') // wait for modal to slide in
             .one($.support.transition.end, function () {
@@ -3687,34 +3687,34 @@ function extendjQuery(jQuery) {
           that.$element.focus().trigger(e)
       })
     }
-  
+
     Modal.prototype.hide = function (e) {
       if (e) e.preventDefault()
-  
+
       e = $.Event('hide.bs.modal')
-  
+
       this.$element.trigger(e)
-  
+
       if (!this.isShown || e.isDefaultPrevented()) return
-  
+
       this.isShown = false
-  
+
       this.escape()
-  
+
       $(document).off('focusin.bs.modal')
-  
+
       this.$element
         .removeClass('in')
         .attr('aria-hidden', true)
         .off('click.dismiss.bs.modal')
-  
+
       $.support.transition && this.$element.hasClass('fade') ?
         this.$element
           .one($.support.transition.end, $.proxy(this.hideModal, this))
           .emulateTransitionEnd(300) :
         this.hideModal()
     }
-  
+
     Modal.prototype.enforceFocus = function () {
       $(document)
         .off('focusin.bs.modal') // guard against infinite focus loop
@@ -3724,7 +3724,7 @@ function extendjQuery(jQuery) {
           }
         }, this))
     }
-  
+
     Modal.prototype.escape = function () {
       if (this.isShown && this.options.keyboard) {
         this.$element.on('keyup.dismiss.bs.modal', $.proxy(function (e) {
@@ -3734,7 +3734,7 @@ function extendjQuery(jQuery) {
         this.$element.off('keyup.dismiss.bs.modal')
       }
     }
-  
+
     Modal.prototype.hideModal = function () {
       var that = this
       this.$element.hide()
@@ -3743,108 +3743,108 @@ function extendjQuery(jQuery) {
         that.$element.trigger('hidden.bs.modal')
       })
     }
-  
+
     Modal.prototype.removeBackdrop = function () {
       this.$backdrop && this.$backdrop.remove()
       this.$backdrop = null
     }
-  
+
     Modal.prototype.backdrop = function (callback) {
       var animate = this.$element.hasClass('fade') ? 'fade' : ''
-  
+
       if (this.isShown && this.options.backdrop) {
         var doAnimate = $.support.transition && animate
-  
+
         this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
           .appendTo(document.body)
-  
+
         this.$element.on('click.dismiss.bs.modal', $.proxy(function (e) {
           if (e.target !== e.currentTarget) return
           this.options.backdrop == 'static'
             ? this.$element[0].focus.call(this.$element[0])
             : this.hide.call(this)
         }, this))
-  
+
         if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
-  
+
         this.$backdrop.addClass('in')
-  
+
         if (!callback) return
-  
+
         doAnimate ?
           this.$backdrop
             .one($.support.transition.end, callback)
             .emulateTransitionEnd(150) :
           callback()
-  
+
       } else if (!this.isShown && this.$backdrop) {
         this.$backdrop.removeClass('in')
-  
+
         $.support.transition && this.$element.hasClass('fade') ?
           this.$backdrop
             .one($.support.transition.end, callback)
             .emulateTransitionEnd(150) :
           callback()
-  
+
       } else if (callback) {
         callback()
       }
     }
-  
-  
+
+
     // MODAL PLUGIN DEFINITION
     // =======================
-  
+
     var old = $.fn.modal
-  
+
     $.fn.modal = function (option, _relatedTarget) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.modal')
         var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
-  
+
         if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
         if (typeof option == 'string') data[option](_relatedTarget)
         else if (options.show) data.show(_relatedTarget)
       })
     }
-  
+
     $.fn.modal.Constructor = Modal
-  
-  
+
+
     // MODAL NO CONFLICT
     // =================
-  
+
     $.fn.modal.noConflict = function () {
       $.fn.modal = old
       return this
     }
-  
-  
+
+
     // MODAL DATA-API
     // ==============
-  
+
     $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
       var $this   = $(this)
       var href    = $this.attr('href')
       var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
       var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-  
+
       if ($this.is('a')) e.preventDefault()
-  
+
       $target
         .modal(option, this)
         .one('hide', function () {
           $this.is(':visible') && $this.focus()
         })
     })
-  
+
     $(document)
       .on('show.bs.modal', '.modal', function () { $(document.body).addClass('modal-open') })
       .on('hidden.bs.modal', '.modal', function () { $(document.body).removeClass('modal-open') })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: tooltip.js v3.1.1
    * http://getbootstrap.com/javascript/#tooltip
@@ -3853,14 +3853,14 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // TOOLTIP PUBLIC CLASS DEFINITION
     // ===============================
-  
+
     var Tooltip = function (element, options) {
       this.type       =
       this.options    =
@@ -3868,10 +3868,10 @@ function extendjQuery(jQuery) {
       this.timeout    =
       this.hoverState =
       this.$element   = null
-  
+
       this.init('tooltip', element, options)
     }
-  
+
     Tooltip.DEFAULTS = {
       animation: true,
       placement: 'top',
@@ -3883,155 +3883,155 @@ function extendjQuery(jQuery) {
       html: false,
       container: false
     }
-  
+
     Tooltip.prototype.init = function (type, element, options) {
       this.enabled  = true
       this.type     = type
       this.$element = $(element)
       this.options  = this.getOptions(options)
-  
+
       var triggers = this.options.trigger.split(' ')
-  
+
       for (var i = triggers.length; i--;) {
         var trigger = triggers[i]
-  
+
         if (trigger == 'click') {
           this.$element.on('click.' + this.type, this.options.selector, $.proxy(this.toggle, this))
         } else if (trigger != 'manual') {
           var eventIn  = trigger == 'hover' ? 'mouseenter' : 'focusin'
           var eventOut = trigger == 'hover' ? 'mouseleave' : 'focusout'
-  
+
           this.$element.on(eventIn  + '.' + this.type, this.options.selector, $.proxy(this.enter, this))
           this.$element.on(eventOut + '.' + this.type, this.options.selector, $.proxy(this.leave, this))
         }
       }
-  
+
       this.options.selector ?
         (this._options = $.extend({}, this.options, { trigger: 'manual', selector: '' })) :
         this.fixTitle()
     }
-  
+
     Tooltip.prototype.getDefaults = function () {
       return Tooltip.DEFAULTS
     }
-  
+
     Tooltip.prototype.getOptions = function (options) {
       options = $.extend({}, this.getDefaults(), this.$element.data(), options)
-  
+
       if (options.delay && typeof options.delay == 'number') {
         options.delay = {
           show: options.delay,
           hide: options.delay
         }
       }
-  
+
       return options
     }
-  
+
     Tooltip.prototype.getDelegateOptions = function () {
       var options  = {}
       var defaults = this.getDefaults()
-  
+
       this._options && $.each(this._options, function (key, value) {
         if (defaults[key] != value) options[key] = value
       })
-  
+
       return options
     }
-  
+
     Tooltip.prototype.enter = function (obj) {
       var self = obj instanceof this.constructor ?
         obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
-  
+
       clearTimeout(self.timeout)
-  
+
       self.hoverState = 'in'
-  
+
       if (!self.options.delay || !self.options.delay.show) return self.show()
-  
+
       self.timeout = setTimeout(function () {
         if (self.hoverState == 'in') self.show()
       }, self.options.delay.show)
     }
-  
+
     Tooltip.prototype.leave = function (obj) {
       var self = obj instanceof this.constructor ?
         obj : $(obj.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type)
-  
+
       clearTimeout(self.timeout)
-  
+
       self.hoverState = 'out'
-  
+
       if (!self.options.delay || !self.options.delay.hide) return self.hide()
-  
+
       self.timeout = setTimeout(function () {
         if (self.hoverState == 'out') self.hide()
       }, self.options.delay.hide)
     }
-  
+
     Tooltip.prototype.show = function () {
       var e = $.Event('show.bs.' + this.type)
-  
+
       if (this.hasContent() && this.enabled) {
         this.$element.trigger(e)
-  
+
         if (e.isDefaultPrevented()) return
         var that = this;
-  
+
         var $tip = this.tip()
-  
+
         this.setContent()
-  
+
         if (this.options.animation) $tip.addClass('fade')
-  
+
         var placement = typeof this.options.placement == 'function' ?
           this.options.placement.call(this, $tip[0], this.$element[0]) :
           this.options.placement
-  
+
         var autoToken = /\s?auto?\s?/i
         var autoPlace = autoToken.test(placement)
         if (autoPlace) placement = placement.replace(autoToken, '') || 'top'
-  
+
         $tip
           .detach()
           .css({ top: 0, left: 0, display: 'block' })
           .addClass(placement)
-  
+
         this.options.container ? $tip.appendTo(this.options.container) : $tip.insertAfter(this.$element)
-  
+
         var pos          = this.getPosition()
         var actualWidth  = $tip[0].offsetWidth
         var actualHeight = $tip[0].offsetHeight
-  
+
         if (autoPlace) {
           var $parent = this.$element.parent()
-  
+
           var orgPlacement = placement
           var docScroll    = document.documentElement.scrollTop || document.body.scrollTop
           var parentWidth  = this.options.container == 'body' ? window.innerWidth  : $parent.outerWidth()
           var parentHeight = this.options.container == 'body' ? window.innerHeight : $parent.outerHeight()
           var parentLeft   = this.options.container == 'body' ? 0 : $parent.offset().left
-  
+
           placement = placement == 'bottom' && pos.top   + pos.height  + actualHeight - docScroll > parentHeight  ? 'top'    :
                       placement == 'top'    && pos.top   - docScroll   - actualHeight < 0                         ? 'bottom' :
                       placement == 'right'  && pos.right + actualWidth > parentWidth                              ? 'left'   :
                       placement == 'left'   && pos.left  - actualWidth < parentLeft                               ? 'right'  :
                       placement
-  
+
           $tip
             .removeClass(orgPlacement)
             .addClass(placement)
         }
-  
+
         var calculatedOffset = this.getCalculatedOffset(placement, pos, actualWidth, actualHeight)
-  
+
         this.applyPlacement(calculatedOffset, placement)
         this.hoverState = null
-  
+
         var complete = function() {
           that.$element.trigger('shown.bs.' + that.type)
         }
-  
+
         $.support.transition && this.$tip.hasClass('fade') ?
           $tip
             .one($.support.transition.end, complete)
@@ -4039,24 +4039,24 @@ function extendjQuery(jQuery) {
           complete()
       }
     }
-  
+
     Tooltip.prototype.applyPlacement = function (offset, placement) {
       var replace
       var $tip   = this.tip()
       var width  = $tip[0].offsetWidth
       var height = $tip[0].offsetHeight
-  
+
       // manually read margins because getBoundingClientRect includes difference
       var marginTop = parseInt($tip.css('margin-top'), 10)
       var marginLeft = parseInt($tip.css('margin-left'), 10)
-  
+
       // we must check for NaN for ie 8/9
       if (isNaN(marginTop))  marginTop  = 0
       if (isNaN(marginLeft)) marginLeft = 0
-  
+
       offset.top  = offset.top  + marginTop
       offset.left = offset.left + marginLeft
-  
+
       // $.fn.offset doesn't round pixel values
       // so we use setOffset directly with our own function B-0
       $.offset.setOffset($tip[0], $.extend({
@@ -4067,89 +4067,89 @@ function extendjQuery(jQuery) {
           })
         }
       }, offset), 0)
-  
+
       $tip.addClass('in')
-  
+
       // check to see if placing tip in new offset caused the tip to resize itself
       var actualWidth  = $tip[0].offsetWidth
       var actualHeight = $tip[0].offsetHeight
-  
+
       if (placement == 'top' && actualHeight != height) {
         replace = true
         offset.top = offset.top + height - actualHeight
       }
-  
+
       if (/bottom|top/.test(placement)) {
         var delta = 0
-  
+
         if (offset.left < 0) {
           delta       = offset.left * -2
           offset.left = 0
-  
+
           $tip.offset(offset)
-  
+
           actualWidth  = $tip[0].offsetWidth
           actualHeight = $tip[0].offsetHeight
         }
-  
+
         this.replaceArrow(delta - width + actualWidth, actualWidth, 'left')
       } else {
         this.replaceArrow(actualHeight - height, actualHeight, 'top')
       }
-  
+
       if (replace) $tip.offset(offset)
     }
-  
+
     Tooltip.prototype.replaceArrow = function (delta, dimension, position) {
       this.arrow().css(position, delta ? (50 * (1 - delta / dimension) + '%') : '')
     }
-  
+
     Tooltip.prototype.setContent = function () {
       var $tip  = this.tip()
       var title = this.getTitle()
-  
+
       $tip.find('.tooltip-inner')[this.options.html ? 'html' : 'text'](title)
       $tip.removeClass('fade in top bottom left right')
     }
-  
+
     Tooltip.prototype.hide = function () {
       var that = this
       var $tip = this.tip()
       var e    = $.Event('hide.bs.' + this.type)
-  
+
       function complete() {
         if (that.hoverState != 'in') $tip.detach()
         that.$element.trigger('hidden.bs.' + that.type)
       }
-  
+
       this.$element.trigger(e)
-  
+
       if (e.isDefaultPrevented()) return
-  
+
       $tip.removeClass('in')
-  
+
       $.support.transition && this.$tip.hasClass('fade') ?
         $tip
           .one($.support.transition.end, complete)
           .emulateTransitionEnd(150) :
         complete()
-  
+
       this.hoverState = null
-  
+
       return this
     }
-  
+
     Tooltip.prototype.fixTitle = function () {
       var $e = this.$element
       if ($e.attr('title') || typeof($e.attr('data-original-title')) != 'string') {
         $e.attr('data-original-title', $e.attr('title') || '').attr('title', '')
       }
     }
-  
+
     Tooltip.prototype.hasContent = function () {
       return this.getTitle()
     }
-  
+
     Tooltip.prototype.getPosition = function () {
       var el = this.$element[0]
       return $.extend({}, (typeof el.getBoundingClientRect == 'function') ? el.getBoundingClientRect() : {
@@ -4157,33 +4157,33 @@ function extendjQuery(jQuery) {
         height: el.offsetHeight
       }, this.$element.offset())
     }
-  
+
     Tooltip.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
       return placement == 'bottom' ? { top: pos.top + pos.height,   left: pos.left + pos.width / 2 - actualWidth / 2  } :
              placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2  } :
              placement == 'left'   ? { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth } :
           /* placement == 'right' */ { top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width   }
     }
-  
+
     Tooltip.prototype.getTitle = function () {
       var title
       var $e = this.$element
       var o  = this.options
-  
+
       title = $e.attr('data-original-title')
         || (typeof o.title == 'function' ? o.title.call($e[0]) :  o.title)
-  
+
       return title
     }
-  
+
     Tooltip.prototype.tip = function () {
       return this.$tip = this.$tip || $(this.options.template)
     }
-  
+
     Tooltip.prototype.arrow = function () {
       return this.$arrow = this.$arrow || this.tip().find('.tooltip-arrow')
     }
-  
+
     Tooltip.prototype.validate = function () {
       if (!this.$element[0].parentNode) {
         this.hide()
@@ -4191,60 +4191,60 @@ function extendjQuery(jQuery) {
         this.options  = null
       }
     }
-  
+
     Tooltip.prototype.enable = function () {
       this.enabled = true
     }
-  
+
     Tooltip.prototype.disable = function () {
       this.enabled = false
     }
-  
+
     Tooltip.prototype.toggleEnabled = function () {
       this.enabled = !this.enabled
     }
-  
+
     Tooltip.prototype.toggle = function (e) {
       var self = e ? $(e.currentTarget)[this.type](this.getDelegateOptions()).data('bs.' + this.type) : this
       self.tip().hasClass('in') ? self.leave(self) : self.enter(self)
     }
-  
+
     Tooltip.prototype.destroy = function () {
       clearTimeout(this.timeout)
       this.hide().$element.off('.' + this.type).removeData('bs.' + this.type)
     }
-  
-  
+
+
     // TOOLTIP PLUGIN DEFINITION
     // =========================
-  
+
     var old = $.fn.tooltip
-  
+
     $.fn.tooltip = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.tooltip')
         var options = typeof option == 'object' && option
-  
+
         if (!data && option == 'destroy') return
         if (!data) $this.data('bs.tooltip', (data = new Tooltip(this, options)))
         if (typeof option == 'string') data[option]()
       })
     }
-  
+
     $.fn.tooltip.Constructor = Tooltip
-  
-  
+
+
     // TOOLTIP NO CONFLICT
     // ===================
-  
+
     $.fn.tooltip.noConflict = function () {
       $.fn.tooltip = old
       return this
     }
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: popover.js v3.1.1
    * http://getbootstrap.com/javascript/#popovers
@@ -4252,110 +4252,110 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // POPOVER PUBLIC CLASS DEFINITION
     // ===============================
-  
+
     var Popover = function (element, options) {
       this.init('popover', element, options)
     }
-  
+
     if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
-  
+
     Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
       placement: 'right',
       trigger: 'click',
       content: '',
       template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
     })
-  
-  
+
+
     // NOTE: POPOVER EXTENDS tooltip.js
     // ================================
-  
+
     Popover.prototype = $.extend({}, $.fn.tooltip.Constructor.prototype)
-  
+
     Popover.prototype.constructor = Popover
-  
+
     Popover.prototype.getDefaults = function () {
       return Popover.DEFAULTS
     }
-  
+
     Popover.prototype.setContent = function () {
       var $tip    = this.tip()
       var title   = this.getTitle()
       var content = this.getContent()
-  
+
       $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
       $tip.find('.popover-content')[ // we use append for html objects to maintain js events
         this.options.html ? (typeof content == 'string' ? 'html' : 'append') : 'text'
       ](content)
-  
+
       $tip.removeClass('fade top bottom left right in')
-  
+
       // IE8 doesn't accept hiding via the `:empty` pseudo selector, we have to do
       // this manually by checking the contents.
       if (!$tip.find('.popover-title').html()) $tip.find('.popover-title').hide()
     }
-  
+
     Popover.prototype.hasContent = function () {
       return this.getTitle() || this.getContent()
     }
-  
+
     Popover.prototype.getContent = function () {
       var $e = this.$element
       var o  = this.options
-  
+
       return $e.attr('data-content')
         || (typeof o.content == 'function' ?
               o.content.call($e[0]) :
               o.content)
     }
-  
+
     Popover.prototype.arrow = function () {
       return this.$arrow = this.$arrow || this.tip().find('.arrow')
     }
-  
+
     Popover.prototype.tip = function () {
       if (!this.$tip) this.$tip = $(this.options.template)
       return this.$tip
     }
-  
-  
+
+
     // POPOVER PLUGIN DEFINITION
     // =========================
-  
+
     var old = $.fn.popover
-  
+
     $.fn.popover = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.popover')
         var options = typeof option == 'object' && option
-  
+
         if (!data && option == 'destroy') return
         if (!data) $this.data('bs.popover', (data = new Popover(this, options)))
         if (typeof option == 'string') data[option]()
       })
     }
-  
+
     $.fn.popover.Constructor = Popover
-  
-  
+
+
     // POPOVER NO CONFLICT
     // ===================
-  
+
     $.fn.popover.noConflict = function () {
       $.fn.popover = old
       return this
     }
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: scrollspy.js v3.1.1
    * http://getbootstrap.com/javascript/#scrollspy
@@ -4363,18 +4363,18 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // SCROLLSPY CLASS DEFINITION
     // ==========================
-  
+
     function ScrollSpy(element, options) {
       var href
       var process  = $.proxy(this.process, this)
-  
+
       this.$element       = $(element).is('body') ? $(window) : $(element)
       this.$body          = $('body')
       this.$scrollElement = this.$element.on('scroll.bs.scroll-spy.data-api', process)
@@ -4385,21 +4385,21 @@ function extendjQuery(jQuery) {
       this.offsets        = $([])
       this.targets        = $([])
       this.activeTarget   = null
-  
+
       this.refresh()
       this.process()
     }
-  
+
     ScrollSpy.DEFAULTS = {
       offset: 10
     }
-  
+
     ScrollSpy.prototype.refresh = function () {
       var offsetMethod = this.$element[0] == window ? 'offset' : 'position'
-  
+
       this.offsets = $([])
       this.targets = $([])
-  
+
       var self     = this
       var $targets = this.$body
         .find(this.selector)
@@ -4407,7 +4407,7 @@ function extendjQuery(jQuery) {
           var $el   = $(this)
           var href  = $el.data('target') || $el.attr('href')
           var $href = /^#./.test(href) && $(href)
-  
+
           return ($href
             && $href.length
             && $href.is(':visible')
@@ -4419,7 +4419,7 @@ function extendjQuery(jQuery) {
           self.targets.push(this[1])
         })
     }
-  
+
     ScrollSpy.prototype.process = function () {
       var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
       var scrollHeight = this.$scrollElement[0].scrollHeight || this.$body[0].scrollHeight
@@ -4428,15 +4428,15 @@ function extendjQuery(jQuery) {
       var targets      = this.targets
       var activeTarget = this.activeTarget
       var i
-  
+
       if (scrollTop >= maxScroll) {
         return activeTarget != (i = targets.last()[0]) && this.activate(i)
       }
-  
+
       if (activeTarget && scrollTop <= offsets[0]) {
         return activeTarget != (i = targets[0]) && this.activate(i)
       }
-  
+
       for (i = offsets.length; i--;) {
         activeTarget != targets[i]
           && scrollTop >= offsets[i]
@@ -4444,72 +4444,72 @@ function extendjQuery(jQuery) {
           && this.activate( targets[i] )
       }
     }
-  
+
     ScrollSpy.prototype.activate = function (target) {
       this.activeTarget = target
-  
+
       $(this.selector)
         .parentsUntil(this.options.target, '.active')
         .removeClass('active')
-  
+
       var selector = this.selector +
           '[data-target="' + target + '"],' +
           this.selector + '[href="' + target + '"]'
-  
+
       var active = $(selector)
         .parents('li')
         .addClass('active')
-  
+
       if (active.parent('.dropdown-menu').length) {
         active = active
           .closest('li.dropdown')
           .addClass('active')
       }
-  
+
       active.trigger('activate.bs.scrollspy')
     }
-  
-  
+
+
     // SCROLLSPY PLUGIN DEFINITION
     // ===========================
-  
+
     var old = $.fn.scrollspy
-  
+
     $.fn.scrollspy = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.scrollspy')
         var options = typeof option == 'object' && option
-  
+
         if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
         if (typeof option == 'string') data[option]()
       })
     }
-  
+
     $.fn.scrollspy.Constructor = ScrollSpy
-  
-  
+
+
     // SCROLLSPY NO CONFLICT
     // =====================
-  
+
     $.fn.scrollspy.noConflict = function () {
       $.fn.scrollspy = old
       return this
     }
-  
-  
+
+
     // SCROLLSPY DATA-API
     // ==================
-  
+
     $(window).on('load', function () {
       $('[data-spy="scroll"]').each(function () {
         var $spy = $(this)
         $spy.scrollspy($spy.data())
       })
     })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: tab.js v3.1.1
    * http://getbootstrap.com/javascript/#tabs
@@ -4517,41 +4517,41 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // TAB CLASS DEFINITION
     // ====================
-  
+
     var Tab = function (element) {
       this.element = $(element)
     }
-  
+
     Tab.prototype.show = function () {
       var $this    = this.element
       var $ul      = $this.closest('ul:not(.dropdown-menu)')
       var selector = $this.data('target')
-  
+
       if (!selector) {
         selector = $this.attr('href')
         selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
       }
-  
+
       if ($this.parent('li').hasClass('active')) return
-  
+
       var previous = $ul.find('.active:last a')[0]
       var e        = $.Event('show.bs.tab', {
         relatedTarget: previous
       })
-  
+
       $this.trigger(e)
-  
+
       if (e.isDefaultPrevented()) return
-  
+
       var $target = $(selector)
-  
+
       this.activate($this.parent('li'), $ul)
       this.activate($target, $target.parent(), function () {
         $this.trigger({
@@ -4560,82 +4560,82 @@ function extendjQuery(jQuery) {
         })
       })
     }
-  
+
     Tab.prototype.activate = function (element, container, callback) {
       var $active    = container.find('> .active')
       var transition = callback
         && $.support.transition
         && $active.hasClass('fade')
-  
+
       function next() {
         $active
           .removeClass('active')
           .find('> .dropdown-menu > .active')
           .removeClass('active')
-  
+
         element.addClass('active')
-  
+
         if (transition) {
           element[0].offsetWidth // reflow for transition
           element.addClass('in')
         } else {
           element.removeClass('fade')
         }
-  
+
         if (element.parent('.dropdown-menu')) {
           element.closest('li.dropdown').addClass('active')
         }
-  
+
         callback && callback()
       }
-  
+
       transition ?
         $active
           .one($.support.transition.end, next)
           .emulateTransitionEnd(150) :
         next()
-  
+
       $active.removeClass('in')
     }
-  
-  
+
+
     // TAB PLUGIN DEFINITION
     // =====================
-  
+
     var old = $.fn.tab
-  
+
     $.fn.tab = function ( option ) {
       return this.each(function () {
         var $this = $(this)
         var data  = $this.data('bs.tab')
-  
+
         if (!data) $this.data('bs.tab', (data = new Tab(this)))
         if (typeof option == 'string') data[option]()
       })
     }
-  
+
     $.fn.tab.Constructor = Tab
-  
-  
+
+
     // TAB NO CONFLICT
     // ===============
-  
+
     $.fn.tab.noConflict = function () {
       $.fn.tab = old
       return this
     }
-  
-  
+
+
     // TAB DATA-API
     // ============
-  
+
     $(document).on('click.bs.tab.data-api', '[data-toggle="tab"], [data-toggle="pill"]', function (e) {
       e.preventDefault()
       $(this).tab('show')
     })
-  
+
   }(jQuery);
-  
+
   /* ========================================================================
    * Bootstrap: affix.js v3.1.1
    * http://getbootstrap.com/javascript/#affix
@@ -4643,34 +4643,34 @@ function extendjQuery(jQuery) {
    * Copyright 2011-2014 Twitter, Inc.
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
    * ======================================================================== */
-  
-  
+
+
   +function ($) {
     'use strict';
-  
+
     // AFFIX CLASS DEFINITION
     // ======================
-  
+
     var Affix = function (element, options) {
       this.options = $.extend({}, Affix.DEFAULTS, options)
       this.$window = $(window)
         .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
         .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
-  
+
       this.$element     = $(element)
       this.affixed      =
       this.unpin        =
       this.pinnedOffset = null
-  
+
       this.checkPosition()
     }
-  
+
     Affix.RESET = 'affix affix-top affix-bottom'
-  
+
     Affix.DEFAULTS = {
       offset: 0
     }
-  
+
     Affix.prototype.getPinnedOffset = function () {
       if (this.pinnedOffset) return this.pinnedOffset
       this.$element.removeClass(Affix.RESET).addClass('affix')
@@ -4678,100 +4678,100 @@ function extendjQuery(jQuery) {
       var position  = this.$element.offset()
       return (this.pinnedOffset = position.top - scrollTop)
     }
-  
+
     Affix.prototype.checkPositionWithEventLoop = function () {
       setTimeout($.proxy(this.checkPosition, this), 1)
     }
-  
+
     Affix.prototype.checkPosition = function () {
       if (!this.$element.is(':visible')) return
-  
+
       var scrollHeight = $(document).height()
       var scrollTop    = this.$window.scrollTop()
       var position     = this.$element.offset()
       var offset       = this.options.offset
       var offsetTop    = offset.top
       var offsetBottom = offset.bottom
-  
+
       if (this.affixed == 'top') position.top += scrollTop
-  
+
       if (typeof offset != 'object')         offsetBottom = offsetTop = offset
       if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
       if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
-  
+
       var affix = this.unpin   != null && (scrollTop + this.unpin <= position.top) ? false :
                   offsetBottom != null && (position.top + this.$element.height() >= scrollHeight - offsetBottom) ? 'bottom' :
                   offsetTop    != null && (scrollTop <= offsetTop) ? 'top' : false
-  
+
       if (this.affixed === affix) return
       if (this.unpin) this.$element.css('top', '')
-  
+
       var affixType = 'affix' + (affix ? '-' + affix : '')
       var e         = $.Event(affixType + '.bs.affix')
-  
+
       this.$element.trigger(e)
-  
+
       if (e.isDefaultPrevented()) return
-  
+
       this.affixed = affix
       this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
-  
+
       this.$element
         .removeClass(Affix.RESET)
         .addClass(affixType)
         .trigger($.Event(affixType.replace('affix', 'affixed')))
-  
+
       if (affix == 'bottom') {
         this.$element.offset({ top: scrollHeight - offsetBottom - this.$element.height() })
       }
     }
-  
-  
+
+
     // AFFIX PLUGIN DEFINITION
     // =======================
-  
+
     var old = $.fn.affix
-  
+
     $.fn.affix = function (option) {
       return this.each(function () {
         var $this   = $(this)
         var data    = $this.data('bs.affix')
         var options = typeof option == 'object' && option
-  
+
         if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
         if (typeof option == 'string') data[option]()
       })
     }
-  
+
     $.fn.affix.Constructor = Affix
-  
-  
+
+
     // AFFIX NO CONFLICT
     // =================
-  
+
     $.fn.affix.noConflict = function () {
       $.fn.affix = old
       return this
     }
-  
-  
+
+
     // AFFIX DATA-API
     // ==============
-  
+
     $(window).on('load', function () {
       $('[data-spy="affix"]').each(function () {
         var $spy = $(this)
         var data = $spy.data()
-  
+
         data.offset = data.offset || {}
-  
+
         if (data.offsetBottom) data.offset.bottom = data.offsetBottom
         if (data.offsetTop)    data.offset.top    = data.offsetTop
-  
+
         $spy.affix(data)
       })
     })
-  
+
   }(jQuery);
 
 };
@@ -17269,33 +17269,33 @@ var __dirname="/vendor/otr/lib";;(function () {
   //   - fixed capitalization in call to int2bigInt in randBigInt
   //     (thanks to Emili Evripidou, Reinhold Behringer, and Samuel Macaleese for finding that bug)
   //
-  // v 5.1  8 Oct 2007 
+  // v 5.1  8 Oct 2007
   //   - renamed inverseModInt_ to inverseModInt since it doesn't change its parameters
   //   - added functions GCD and randBigInt, which call GCD_ and randBigInt_
   //   - fixed a bug found by Rob Visser (see comment with his name below)
   //   - improved comments
   //
   // This file is public domain.   You can use it for any purpose without restriction.
-  // I do not guarantee that it is correct, so use it at your own risk.  If you use 
-  // it for something interesting, I'd appreciate hearing about it.  If you find 
+  // I do not guarantee that it is correct, so use it at your own risk.  If you use
+  // it for something interesting, I'd appreciate hearing about it.  If you find
   // any bugs or make any improvements, I'd appreciate hearing about those too.
-  // It would also be nice if my name and URL were left in the comments.  But none 
+  // It would also be nice if my name and URL were left in the comments.  But none
   // of that is required.
   //
   // This code defines a bigInt library for arbitrary-precision integers.
-  // A bigInt is an array of integers storing the value in chunks of bpe bits, 
+  // A bigInt is an array of integers storing the value in chunks of bpe bits,
   // little endian (buff[0] is the least significant word).
   // Negative bigInts are stored two's complement.  Almost all the functions treat
   // bigInts as nonnegative.  The few that view them as two's complement say so
-  // in their comments.  Some functions assume their parameters have at least one 
+  // in their comments.  Some functions assume their parameters have at least one
   // leading zero element. Functions with an underscore at the end of the name put
-  // their answer into one of the arrays passed in, and have unpredictable behavior 
-  // in case of overflow, so the caller must make sure the arrays are big enough to 
-  // hold the answer.  But the average user should never have to call any of the 
-  // underscored functions.  Each important underscored function has a wrapper function 
-  // of the same name without the underscore that takes care of the details for you.  
-  // For each underscored function where a parameter is modified, that same variable 
-  // must not be used as another argument too.  So, you cannot square x by doing 
+  // their answer into one of the arrays passed in, and have unpredictable behavior
+  // in case of overflow, so the caller must make sure the arrays are big enough to
+  // hold the answer.  But the average user should never have to call any of the
+  // underscored functions.  Each important underscored function has a wrapper function
+  // of the same name without the underscore that takes care of the details for you.
+  // For each underscored function where a parameter is modified, that same variable
+  // must not be used as another argument too.  So, you cannot square x by doing
   // multMod_(x,x,n).  You must use squareMod_(x,n) instead, or do y=dup(x); multMod_(x,y,n).
   // Or simply use the multMod(x,x,n) function without the underscore, where
   // such issues never arise, because non-underscored functions never change
@@ -17307,20 +17307,20 @@ var __dirname="/vendor/otr/lib";;(function () {
   // that when a function is called repeatedly with same-sized parameters, it only allocates
   // memory on the first call.
   //
-  // Note that for cryptographic purposes, the calls to Math.random() must 
+  // Note that for cryptographic purposes, the calls to Math.random() must
   // be replaced with calls to a better pseudorandom number generator.
   //
   // In the following, "bigInt" means a bigInt with at least one leading zero element,
-  // and "integer" means a nonnegative integer less than radix.  In some cases, integer 
+  // and "integer" means a nonnegative integer less than radix.  In some cases, integer
   // can be negative.  Negative bigInts are 2s complement.
-  // 
+  //
   // The following functions do not modify their inputs.
   // Those returning a bigInt, string, or Array will dynamically allocate memory for that value.
   // Those returning a boolean will return the integer 0 (false) or 1 (true).
-  // Those returning boolean or int will not allocate memory except possibly on the first 
+  // Those returning boolean or int will not allocate memory except possibly on the first
   // time they're called with a given parameter size.
-  // 
-  // bigInt  add(x,y)               //return (x+y) for bigInts x and y.  
+  //
+  // bigInt  add(x,y)               //return (x+y) for bigInts x and y.
   // bigInt  addInt(x,n)            //return (x+n) where x is a bigInt and n is an integer.
   // string  bigInt2str(x,base)     //return a string form of bigInt x in a given base, with 2 <= base <= 95
   // int     bitSize(x)             //return how many bits long the bigInt x is, not counting leading zeros
@@ -17353,8 +17353,8 @@ var __dirname="/vendor/otr/lib";;(function () {
   //
   //
   // The following functions each have a non-underscored version, which most users should call instead.
-  // These functions each write to a single parameter, and the caller is responsible for ensuring the array 
-  // passed in is large enough to hold the result. 
+  // These functions each write to a single parameter, and the caller is responsible for ensuring the array
+  // passed in is large enough to hold the result.
   //
   // void    addInt_(x,n)          //do x=x+n where x is a bigInt and n is an integer
   // void    add_(x,y)             //do x=x+y for bigInts x and y
@@ -17370,9 +17370,9 @@ var __dirname="/vendor/otr/lib";;(function () {
   // void    randTruePrime_(ans,k) //do ans = a random k-bit true random prime (not just probable prime) with 1 in the msb.
   // void    sub_(x,y)             //do x=x-y for bigInts x and y. Negative answers will be 2s complement.
   //
-  // The following functions do NOT have a non-underscored version. 
+  // The following functions do NOT have a non-underscored version.
   // They each write a bigInt result to one or more parameters.  The caller is responsible for
-  // ensuring the arrays passed in are large enough to hold the results. 
+  // ensuring the arrays passed in are large enough to hold the results.
   //
   // void addShift_(x,y,ys)       //do x=x+(y<<(ys*bpe))
   // void carry_(x)               //do carries and borrows so each element of the bigInt x fits in bpe bits.
@@ -17443,7 +17443,7 @@ var __dirname="/vendor/otr/lib";;(function () {
 
   var one=int2bigInt(1,1,1);     //constant used in powMod_()
 
-  //the following global variables are scratchpad memory to 
+  //the following global variables are scratchpad memory to
   //reduce dynamic memory allocation in the inner loop
   var t=new Array(0);
   var ss=t;       //used in mult_()
@@ -17462,7 +17462,7 @@ var __dirname="/vendor/otr/lib";;(function () {
 
   var primes=t, pows=t, s_i=t, s_i2=t, s_R=t, s_rm=t, s_q=t, s_n1=t;
   var s_a=t, s_r2=t, s_n=t, s_b=t, s_d=t, s_x1=t, s_x2=t, s_aa=t; //used in randTruePrime_()
-    
+
   var rpprb=t; //used in randProbPrimeRounds() (which also uses "primes")
 
   ////////////////////////////////////////////////////////////////////////////////////////
@@ -17528,7 +17528,7 @@ var __dirname="/vendor/otr/lib";;(function () {
     for (i=0;i<mr_r.length;i++)
       for (j=1;j<mask;j<<=1)
         if (x[i] & j) {
-          s=(k<mr_r.length+bpe ? k : 0); 
+          s=(k<mr_r.length+bpe ? k : 0);
            i=mr_r.length;
            j=mask;
         } else
@@ -17542,7 +17542,7 @@ var __dirname="/vendor/otr/lib";;(function () {
     s = k*bpe + i - 1;
     /* end */
 
-    if (s)                
+    if (s)
       rightShift_(mr_r,s);
 
     powMod_(mr_a,mr_r,x);
@@ -17560,7 +17560,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         return 0;
       }
     }
-    return 1;  
+    return 1;
   }
 
   //returns how many bits long the bigInt is, not counting leading zeros.
@@ -17603,12 +17603,12 @@ var __dirname="/vendor/otr/lib";;(function () {
 
   //return a k-bit probable random prime using n rounds of Miller Rabin (after trial division with small primes)
   function randProbPrimeRounds(k,n) {
-    var ans, i, divisible, B; 
+    var ans, i, divisible, B;
     B=30000;  //B is largest prime to use in trial division
     ans=int2bigInt(0,k,0);
-    
+
     //optimization: try larger and smaller B to find the best limit.
-    
+
     if (primes.length==0)
       primes=findPrimes(30000);  //check for divisibility by primes <=30000
 
@@ -17616,23 +17616,23 @@ var __dirname="/vendor/otr/lib";;(function () {
       rpprb=dup(ans);
 
     for (;;) { //keep trying random values for ans until one appears to be prime
-      //optimization: pick a random number times L=2*3*5*...*p, plus a 
+      //optimization: pick a random number times L=2*3*5*...*p, plus a
       //   random element of the list of all numbers in [0,L) not divisible by any prime up to p.
       //   This can reduce the amount of random number generation.
-      
+
       randBigInt_(ans,k,0); //ans = a random odd number to check
-      ans[0] |= 1; 
+      ans[0] |= 1;
       divisible=0;
-    
+
       //check ans for divisibility by small primes up to B
       for (i=0; (i<primes.length) && (primes[i]<=B); i++)
         if (modInt(ans,primes[i])==0 && !equalsInt(ans,primes[i])) {
           divisible=1;
           break;
-        }      
-      
+        }
+
       //optimization: change millerRabin so the base can be bigger than the number being checked, then eliminate the while here.
-      
+
       //do n rounds of Miller Rabin, with random bases less than ans
       for (i=0; i<n && !divisible; i++) {
         randBigInt_(rpprb,k,0);
@@ -17641,10 +17641,10 @@ var __dirname="/vendor/otr/lib";;(function () {
         if (!millerRabin(ans,rpprb))
           divisible=1;
       }
-      
+
       if(!divisible)
         return ans;
-    }  
+    }
   }
 
   //return a new bigInt equal to (x mod n) for bigInts x and n.
@@ -17670,28 +17670,28 @@ var __dirname="/vendor/otr/lib";;(function () {
 
   //return (x**y mod n) where x,y,n are bigInts and ** is exponentiation.  0**0=1. Faster for odd n.
   function powMod(x,y,n) {
-    var ans=expand(x,n.length);  
+    var ans=expand(x,n.length);
     powMod_(ans,trim(y,2),trim(n,2),0);  //this should work without the trim, but doesn't
     return trim(ans,1);
   }
 
   //return (x-y) for bigInts x and y.  Negative answers will be 2s complement
   function sub(x,y) {
-    var ans=expand(x,(x.length>y.length ? x.length+1 : y.length+1)); 
+    var ans=expand(x,(x.length>y.length ? x.length+1 : y.length+1));
     sub_(ans,y);
     return trim(ans,1);
   }
 
-  //return (x+y) for bigInts x and y.  
+  //return (x+y) for bigInts x and y.
   function add(x,y) {
-    var ans=expand(x,(x.length>y.length ? x.length+1 : y.length+1)); 
+    var ans=expand(x,(x.length>y.length ? x.length+1 : y.length+1));
     add_(ans,y);
     return trim(ans,1);
   }
 
   //return (x**(-1) mod n) for bigInts x and n.  If no inverse exists, it returns null
   function inverseMod(x,n) {
-    var ans=expand(x,n.length); 
+    var ans=expand(x,n.length);
     var s;
     s=inverseMod_(ans,n);
     return s ? trim(ans,1) : null;
@@ -17786,10 +17786,10 @@ var __dirname="/vendor/otr/lib";;(function () {
       add_(s_R,s_i);   //now s_R is in the range [s_i+1,2*s_i]
 
       copy_(s_n,s_q);
-      mult_(s_n,s_R); 
+      mult_(s_n,s_R);
       multInt_(s_n,2);
       addInt_(s_n,1);    //s_n=2*s_R*s_q+1
-      
+
       copy_(s_r2,s_R);
       multInt_(s_r2,2);  //s_r2=2*s_R
 
@@ -17798,10 +17798,10 @@ var __dirname="/vendor/otr/lib";;(function () {
         if (modInt(s_n,primes[j])==0 && !equalsInt(s_n,primes[j])) {
           divisible=1;
           break;
-        }      
+        }
 
       if (!divisible)    //if it passes small primes check, then try a single Miller-Rabin base 2
-        if (!millerRabinInt(s_n,2)) //this line represents 75% of the total runtime for randTruePrime_ 
+        if (!millerRabinInt(s_n,2)) //this line represents 75% of the total runtime for randTruePrime_
           divisible=1;
 
       if (!divisible) {  //if it passes that test, continue checking s_n
@@ -17896,7 +17896,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         qp=Math.floor((xp+B)/(yp+D));
         if (q!=qp)
           break;
-        t= A-q*C;   A=C;   C=t;    //  do (A,B,xp, C,D,yp) = (C,D,yp, A,B,xp) - q*(0,0,0, C,D,yp)      
+        t= A-q*C;   A=C;   C=t;    //  do (A,B,xp, C,D,yp) = (C,D,yp, A,B,xp) - q*(0,0,0, C,D,yp)
         t= B-q*D;   B=D;   D=t;
         t=xp-q*yp; xp=yp; yp=t;
       }
@@ -17909,7 +17909,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         copy_(T,x);
         copy_(x,y);
         copy_(y,T);
-      } 
+      }
     }
     if (y[0]==0)
       return;
@@ -17953,7 +17953,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         halve_(eg_u);
         if (!(eg_A[0]&1) && !(eg_B[0]&1)) { //if eg_A==eg_B==0 mod 2
           halve_(eg_A);
-          halve_(eg_B);      
+          halve_(eg_B);
         } else {
           add_(eg_A,n);  halve_(eg_A);
           sub_(eg_B,x);  halve_(eg_B);
@@ -17964,7 +17964,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         halve_(eg_v);
         if (!(eg_C[0]&1) && !(eg_D[0]&1)) { //if eg_C==eg_D==0 mod 2
           halve_(eg_C);
-          halve_(eg_D);      
+          halve_(eg_D);
         } else {
           add_(eg_C,n);  halve_(eg_C);
           sub_(eg_D,x);  halve_(eg_D);
@@ -18011,7 +18011,7 @@ var __dirname="/vendor/otr/lib";;(function () {
     }
   }
 
-  //this deprecated function is for backward compatibility only. 
+  //this deprecated function is for backward compatibility only.
   function inverseModInt_(x,n) {
      return inverseModInt(x,n);
   }
@@ -18046,7 +18046,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         halve_(eg_u);
         if (!(eg_A[0]&1) && !(eg_B[0]&1)) { //if A==B==0 mod 2
           halve_(eg_A);
-          halve_(eg_B);      
+          halve_(eg_B);
         } else {
           add_(eg_A,y);  halve_(eg_A);
           sub_(eg_B,x);  halve_(eg_B);
@@ -18057,7 +18057,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         halve_(v);
         if (!(eg_C[0]&1) && !(eg_D[0]&1)) { //if C==D==0 mod 2
           halve_(eg_C);
-          halve_(eg_D);      
+          halve_(eg_D);
         } else {
           add_(eg_C,y);  halve_(eg_C);
           sub_(eg_D,x);  halve_(eg_D);
@@ -18100,7 +18100,7 @@ var __dirname="/vendor/otr/lib";;(function () {
   function greaterShift(x,y,shift) {
     var i, kx=x.length, ky=y.length;
     var k=((kx+shift)<ky) ? (kx+shift) : ky;
-    for (i=ky-1-shift; i<kx && i>=0; i++) 
+    for (i=ky-1-shift; i<kx && i>=0; i++)
       if (x[i]>0)
         return 1; //if there are nonzeros in x to the left of the first column of y, then x is bigger
     for (i=kx-1+shift; i<ky; i++)
@@ -18144,10 +18144,10 @@ var __dirname="/vendor/otr/lib";;(function () {
     copy_(r,x);
     for (ky=y.length;y[ky-1]==0;ky--); //ky is number of elements in y, not including leading zeros
 
-    //normalize: ensure the most significant element of y has its highest bit set  
+    //normalize: ensure the most significant element of y has its highest bit set
     b=y[ky-1];
     for (a=0; b; a++)
-      b>>=1;  
+      b>>=1;
     a=bpe-a;  //a is how many bits to shift so that the high order bit of y is leftmost in its array element
     leftShift_(y,a);  //multiply both by 1<<a now, then divide both by that at the end
     leftShift_(r,a);
@@ -18167,11 +18167,11 @@ var __dirname="/vendor/otr/lib";;(function () {
       else
         q[i-ky]=Math.floor((r[i]*radix+r[i-1])/y[ky-1]);
 
-      //The following for(;;) loop is equivalent to the commented while loop, 
+      //The following for(;;) loop is equivalent to the commented while loop,
       //except that the uncommented version avoids overflow.
       //The commented loop comes from HAC, which assumes r[-1]==y[-1]==0
       //  while (q[i-ky]*(y[ky-1]*radix+y[ky-2]) > r[i]*radix*radix+r[i-1]*radix+r[i-2])
-      //    q[i-ky]--;    
+      //    q[i-ky]--;
       for (;;) {
         y2=(ky>1 ? y[ky-2] : 0)*q[i-ky];
         c=y2;
@@ -18182,7 +18182,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         y1=y1 & mask;
         c = (c - y1) / radix;
 
-        if (c==r[i] ? y1==r[i-1] ? y2>(i>1 ? r[i-2] : 0) : y1>r[i-1] : c>r[i]) 
+        if (c==r[i] ? y1==r[i-1] ? y2>(i>1 ? r[i-2] : 0) : y1>r[i-1] : c>r[i])
           q[i-ky]--;
         else
           break;
@@ -18229,7 +18229,7 @@ var __dirname="/vendor/otr/lib";;(function () {
   //the returned array stores the bigInt in bpe-bit chunks, little endian (buff[0] is least significant word)
   //Pad the array with leading zeros so that it has at least minSize elements.
   //There will always be at least one leading 0 element.
-  function int2bigInt(t,bits,minSize) {   
+  function int2bigInt(t,bits,minSize) {
     var i,k, buff;
     k=Math.ceil(bits/bpe)+1;
     k=minSize>k ? minSize : k;
@@ -18238,7 +18238,7 @@ var __dirname="/vendor/otr/lib";;(function () {
     return buff;
   }
 
-  //return the bigInt given a string representation in a given base.  
+  //return the bigInt given a string representation in a given base.
   //Pad the array with leading zeros so that it has at least minSize elements.
   //If base=-1, then it reads in a space-separated list of array elements in decimal.
   //The array will always have at least one leading zero, unless base=-1.
@@ -18254,7 +18254,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         y[0]=parseInt(s,10);
         x=y;
         d=s.indexOf(',',0);
-        if (d<1) 
+        if (d<1)
           break;
         s=s.substring(d+1);
         if (s.length==0)
@@ -18347,7 +18347,7 @@ var __dirname="/vendor/otr/lib";;(function () {
   function bigInt2str(x,base) {
     var i,t,s="";
 
-    if (s6.length!=x.length) 
+    if (s6.length!=x.length)
       s6=dup(x);
     else
       copy_(s6,x);
@@ -18386,7 +18386,7 @@ var __dirname="/vendor/otr/lib";;(function () {
       x[i]=0;
   }
 
-  //do x=y on bigInt x and integer y.  
+  //do x=y on bigInt x and integer y.
   function copyInt_(x,n) {
     var i,c;
     for (c=n,i=0;i<x.length;i++) {
@@ -18450,7 +18450,7 @@ var __dirname="/vendor/otr/lib";;(function () {
       for (i=x.length; i>=k; i--) //left shift x by k elements
         x[i]=x[i-k];
       for (;i>=0;i--)
-        x[i]=0;  
+        x[i]=0;
       n%=bpe;
     }
     if (!n)
@@ -18619,7 +18619,7 @@ var __dirname="/vendor/otr/lib";;(function () {
     else
       copy_(s4,x);
     if (s5.length!=x.length)
-      s5=dup(x);  
+      s5=dup(x);
     divide_(s4,n,s5,x);  //x = remainder of s4 / n
   }
 
@@ -18642,7 +18642,7 @@ var __dirname="/vendor/otr/lib";;(function () {
     var i,j,d,c,kx,kn,k;
     for (kx=x.length; kx>0 && !x[kx-1]; kx--);  //ignore leading zeros in x
     k=kx>n.length ? 2*kx : 2*n.length; //k=# elements in the product, which is twice the elements in the larger of x and n
-    if (s0.length!=k) 
+    if (s0.length!=k)
       s0=new Array(k);
     copyInt_(s0,0);
     for (i=0;i<kx;i++) {
@@ -18685,7 +18685,7 @@ var __dirname="/vendor/otr/lib";;(function () {
         if (y[0]&1)
           multMod_(x,s7,n);
         divInt_(y,2);
-        squareMod_(s7,n); 
+        squareMod_(s7,n);
       }
       return;
     }
@@ -18716,7 +18716,7 @@ var __dirname="/vendor/otr/lib";;(function () {
           return;
         }
         k2=1<<(bpe-1);
-      }    
+      }
       mont_(x,x,n,np);
 
       if (k2 & y[k1]) //if next bit is a 1
@@ -18725,10 +18725,10 @@ var __dirname="/vendor/otr/lib";;(function () {
   }
 
 
-  //do x=x*y*Ri mod n for bigInts x,y,n, 
-  //  where Ri = 2**(-kn*bpe) mod n, and kn is the 
-  //  number of elements in the n array, not 
-  //  counting leading zeros.  
+  //do x=x*y*Ri mod n for bigInts x,y,n,
+  //  where Ri = 2**(-kn*bpe) mod n, and kn is the
+  //  number of elements in the n array, not
+  //  counting leading zeros.
   //x array must have at least as many elemnts as the n array
   //It's OK if x and y are the same variable.
   //must have:
@@ -18742,12 +18742,12 @@ var __dirname="/vendor/otr/lib";;(function () {
 
     if (sa.length!=kn)
       sa=new Array(kn);
-      
+
     copyInt_(sa,0);
 
     for (;kn>0 && n[kn-1]==0;kn--); //ignore leading zeros of n
     for (;ky>0 && y[ky-1]==0;ky--); //ignore leading zeros of y
-    ks=sa.length-1; //sa will never have more than this many nonzero elements.  
+    ks=sa.length-1; //sa will never have more than this many nonzero elements.
 
     //the following loop consumes 95% of the runtime for randTruePrime_() and powMod_() for large numbers
     for (i=0; i<kn; i++) {
@@ -18756,7 +18756,7 @@ var __dirname="/vendor/otr/lib";;(function () {
       c=(t+ui*n[0]);
       c = (c - (c & mask)) / radix;
       t=x[i];
-      
+
       //do sa=(sa+x[i]*y+ui*n)/b   where b=2**bpe.  Loop is unrolled 5-fold for speed
       j=1;
       for (;j<ky-4;) {
@@ -24535,7 +24535,7 @@ function Buffer(subject, encoding, offset) {
   if (encoding == "base64" && typeof subject == "string") {
     subject = stringtrim(subject);
     while (subject.length % 4 != 0) {
-      subject = subject + "="; 
+      subject = subject + "=";
     }
   }
 
@@ -25643,7 +25643,7 @@ Buffer.prototype.writeDoubleBE = function(value, offset, noAssert) {
 
 	function b64ToByteArray(b64) {
 		var i, j, l, tmp, placeHolders, arr;
-	
+
 		if (b64.length % 4 > 0) {
 			throw 'Invalid string. Length must be a multiple of 4';
 		}
@@ -25802,7 +25802,7 @@ function hash(alg, key) {
   return {
     update: function (data) {
       if(!Buffer.isBuffer(data)) data = new Buffer(data)
-        
+
       bufs.push(data)
       length += data.length
       return this
@@ -26352,7 +26352,7 @@ function Buffer(subject, encoding, offset) {
   if (encoding == "base64" && typeof subject == "string") {
     subject = stringtrim(subject);
     while (subject.length % 4 != 0) {
-      subject = subject + "="; 
+      subject = subject + "=";
     }
   }
 
@@ -27462,7 +27462,7 @@ module.exports=require('q9TxCC');
 
 	function b64ToByteArray(b64) {
 		var i, j, l, tmp, placeHolders, arr;
-	
+
 		if (b64.length % 4 > 0) {
 			throw 'Invalid string. Length must be a multiple of 4';
 		}
@@ -29623,21 +29623,21 @@ var Buffer=require("__browserify_Buffer").Buffer;//     uuid.js
         json.user_mentions[i].screenName = json.user_mentions[i].screen_name;
       }
     }
-    
+
     if (json.hashtags) {
       for (var i = 0; i < json.hashtags.length; i++) {
         // this is a #hashtag
         json.hashtags[i].hashtag = json.hashtags[i].text;
       }
     }
-    
+
     if (json.symbols) {
       for (var i = 0; i < json.symbols.length; i++) {
         // this is a $CASH tag
         json.symbols[i].cashtag = json.symbols[i].text;
       }
     }
-    
+
     // concatenate all entities
     var entities = [];
     for (var key in json) {
